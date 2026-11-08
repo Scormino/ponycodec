@@ -1,0 +1,28 @@
+{
+	"name": "ponycodec",
+	"version": "1.0.0",
+	"private": true,
+	"description": "Byte-compatible Pony Town 0.53.1-alpha pony codec (Unlicense; art/music CC BY-NC 4.0)",
+	"license": "Unlicense",
+	"scripts": {
+		"build": "tsc -p tsconfig.json",
+		"gen-schema": "node scripts/gen-schema.js",
+		"extract-schema": "node scripts/extract-schema.js",
+		"gen-render": "node scripts/gen-render.js",
+		"extract-render": "node scripts/extract-render.js",
+		"gen-pose": "node scripts/gen-pose.js",
+		"extract-pose": "node scripts/extract-pose.js",
+		"test": "npm run build && node dist/test/run.js",
+		"diff": "npm run build && node scripts/diff-test.js",
+		"diff-render": "npm run build && node scripts/diff-render.js",
+		"diff-pixels": "npm run build && node scripts/diff-pixels.js",
+		"diff-webgl": "npm run build && node scripts/diff-webgl.js",
+		"check-webgl": "npm run build && node scripts/check-webgl.js",
+		"check-browser": "npm run build && node scripts/check-browser.js",
+		"serve": "node scripts/serve.js",
+		"example": "npm run build && node dist/example/render.js"
+	},
+	"devDependencies": {
+		"typescript": "3.9.10"
+	}
+}
